@@ -4,6 +4,6 @@ module ApplicationHelper
         gravatar_id = Digest::MD5::hexdigest(chef.email.downcase)
         size = options[:size]
         gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
-        image_tag(gravatar_url, alt: chef.chefname, class: "gravatar")
+        image_tag(gravatar_url, alt: chef.chefname, class: "avatar")
     end
 end
