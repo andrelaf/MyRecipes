@@ -19,6 +19,15 @@ Rails.application.routes.draw do
   
   end
   
+  resources :chefs, except: [:new]
+  get '/register', to: 'chefs#new'
+  
+  get 'login', to: 'logins#new'
+  
+  post 'login', to: 'logins#create'
+  
+  get 'logout', to: 'logins#destroy'
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
